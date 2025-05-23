@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pisang Coklat Ellyza - Lezatnya Pisang Coklat Premium</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .bg-animated {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(135deg, #ffcce6 0%, #ff99cc 50%, #ff66b3 100%);
+            overflow: hidden;
+        }
+        
+        .bg-animated:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="rgba(255,255,255,0.1)"><circle cx="25" cy="25" r="3"/><circle cx="75" cy="25" r="3"/><circle cx="50" cy="50" r="3"/><circle cx="25" cy="75" r="3"/><circle cx="75" cy="75" r="3"/></svg>');
+            background-size: 50px 50px;
+            animation: float 15s infinite ease-in-out;
+        }
+        
+        .bg-animated:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="rgba(255,255,255,0.05)"><path d="M30,30 Q50,10 70,30 T90,50 Q70,70 50,90 T10,50 Q30,30 50,10 T90,10" /></svg>');
+            background-size: 100px 100px;
+            animation: float 20s infinite ease-in-out reverse;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        .heartbeat {
+            animation: pulse 1.5s infinite;
+        }
+    </style>
+</head>
+<body class="font-sans text-pink-900">
+    <div class="bg-animated"></div>
+    
+    <header class="sticky top-0 z-50 bg-white bg-opacity-80 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 rounded-full bg-pink-500 flex items-center justify-center text-white">
+                    <i class="fas fa-banana text-xl"></i>
+                </div>
+                <h1 class="text-2xl font-bold bg-gradient-to-r from-pink-500 to-pink-700 bg-clip-text text-transparent">Pisang Coklat Ellyza</h1>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-pink-600 font-medium transition">Beranda</a>
+                <a href="#products" class="hover:text-pink-600 font-medium transition">Produk</a>
+                <a href="#about" class="hover:text-pink-600 font-medium transition">Tentang Kami</a>
+                <a href="#contact" class="hover:text-pink-600 font-medium transition">Kontak</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <button class="p-2 text-pink-600 hover:bg-pink-50 rounded-full transition">
+                    <i class="fas fa-shopping-cart"></i>
+                </button>
+                <button class="md:hidden p-2 text-pink-600">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <section id="home" class="relative overflow-hidden py-16 md:py-24">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Pisang Coklat <span class="text-pink-600">Premium</span></h2>
+                <p class="text-lg mb-6 text-pink-800">Rasa yang menggoda, tekstur yang sempurna. Dibuat dengan pisang pilihan dan coklat berkualitas tinggi untuk pengalaman makan yang tak terlupakan.</p>
+                <div class="flex flex-wrap gap-4 mb-8">
+                    <a href="https://api.whatsapp.com/send?phone=6285812450439&text=Halo%20Admin%20Saya%20Mau%20Order" class="px-6 py-3 bg-pink-600 hover:bg-pink-700 text-white rounded-full font-medium transition-all transform hover:scale-105 shadow-lg hover:shadow-xl">
+                        Pesan Sekarang <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+        
+            
+            <div class="md:w-1/2 flex mr-4">
+                <div class="floating">
+                    <img src="img/WhatsApp Image 2025-05-23 at 17.33.19.jpeg" alt="Pisang Coklat Ellyza" class="w-full max-w-md mx-auto pulse">
+                </div>
+                
+                <div class="absolute -bottom-10 -left-10 w-32 h-32 rounded-full bg-pink-200 opacity-30"></div>
+                <div class="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-pink-100 opacity-40"></div>
+                <div class="absolute top-1/3 right-0 w-24 h-24 rounded-full bg-pink-300 opacity-20"></div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="py-12 bg-white bg-opacity-70">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-pink-50 p-6 rounded-xl text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-pink-100 flex items-center justify-center text-pink-600 text-2xl">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">Bahan Alami</h3>
+                    <p class="text-sm text-pink-800">Dibuat dari pisang segar dan coklat premium</p>
+                </div>
+                
+                <div class="bg-pink-50 p-6 rounded-xl text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-pink-100 flex items-center justify-center text-pink-600 text-2xl">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">Tanpa Pengawet</h3>
+                    <p class="text-sm text-pink-800">100% bebas bahan kimia berbahaya</p>
+                </div>
+                
+                <div class="bg-pink-50 p-6 rounded-xl text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-pink-100 flex items-center justify-center text-pink-600 text-2xl">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">Kualitas Terbaik</h3>
+                    <p class="text-sm text-pink-800">Standar produksi tinggi dan higienis</p>
+                </div>
+                
+                <div class="bg-pink-50 p-6 rounded-xl text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-pink-100 flex items-center justify-center text-pink-600 text-2xl">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">Pengiriman Cepat</h3>
+                    <p class="text-sm text-pink-800">Dikirim langsung ke rumah Anda</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="products" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Produk Kami</h2>
+                <p class="max-w-2xl mx-auto text-pink-800">Temukan berbagai varian pisang coklat yang lezat dan menggoda selera</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg product-card transition duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="img/WhatsApp Image 2025-05-23 at 17.33.19.jpeg" alt="Pisang Coklat Original" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full text-xs font-bold">BESTSELLER</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-lg">Pisang Coklat</h3>
+                            <div class="text-pink-600 font-bold">Rp 10.000</div>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-4">Pisang Coklat isi 8pcs dengan Topping Tersedia: Oreo, Milo, Dan Keju Detailnya Bisa Di Whatsapp</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <button class="px-4 py-2 bg-pink-100 hover:bg-pink-200 text-pink-700 rounded-full text-sm font-medium transition">
+                                <i class="fas fa-plus mr-1"></i> Tambah
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg product-card transition duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="img/WhatsApp Image 2025-05-23 at 17.33.20.jpeg" alt="Pisang Coklat Keju" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-xs font-bold">NEW</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-lg">Churros</h3>
+                            <div class="text-pink-600 font-bold">Rp 12.000</div>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-4">Perpaduan coklat creamy dan lumer di mulut</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <button class="px-4 py-2 bg-pink-100 hover:bg-pink-200 text-pink-700 rounded-full text-sm font-medium transition">
+                                <i class="fas fa-plus mr-1"></i> Tambah
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            
+            <div class="text-center mt-12">
+                <button class="px-8 py-3 border-2 border-pink-600 text-pink-600 hover:bg-pink-50 rounded-full font-medium transition">
+                    Lihat Semua Varian <i class="fas fa-chevron-down ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about" class="py-16 bg-pink-50 bg-opacity-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <img src="img/WhatsApp Image 2025-05-23 at 17.33.19.jpeg" alt="Tentang Pisang Coklat Ellyza" class="rounded-xl shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-6">Tentang Pisang Coklat Ellyza</h2>
+                    <p class="mb-4 text-pink-800">Pisang Coklat Ellyza dimulai dari kecintaan kami terhadap pisang dan coklat. Kami ingin menciptakan camilan yang tidak hanya enak tetapi juga berkualitas tinggi dengan bahan-bahan terbaik.</p>
+                    <p class="mb-6 text-pink-800">Setiap pisang dipilih dengan teliti untuk memastikan kematangan yang sempurna, kemudian dipadukan dengan coklat premium pilihan untuk menciptakan rasa yang harmonis dan menggoda.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-pink-100 p-2 rounded-full mr-4 text-pink-600">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">100% Alami</h4>
+                                <p class="text-sm text-pink-700">Tanpa bahan pengawet atau pewarna buatan</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-pink-100 p-2 rounded-full mr-4 text-pink-600">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Higienis</h4>
+                                <p class="text-sm text-pink-700">Proses pembuatan dengan standar kebersihan tinggi</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-pink-100 p-2 rounded-full mr-4 text-pink-600">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Rasa Konsisten</h4>
+                                <p class="text-sm text-pink-700">Kualitas rasa yang sama setiap kali Anda memesan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="py-16 bg-pink-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Siap Menikmati Pisang Coklat Ellyza?</h2>
+            <p class="max-w-2xl mx-auto mb-8 text-pink-100">Pesan sekarang dan dapatkan pengalaman rasa yang tak terlupakan</p>
+            <a href="https://api.whatsapp.com/send?phone=6285812450439&text=Halo%20Admin%20Saya%20Mau%20Order" class="px-8 py-4 bg-white hover:bg-gray-100 text-pink-600 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-lg">
+                <i class="fas fa-shopping-bag mr-2"></i> Pesan Sekarang
+            </a>
+        </div>
+    </section>
+    
+    <section id="contact" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12">
+                    <h2 class="text-3xl font-bold mb-6">Hubungi Kami</h2>
+                    <p class="mb-6 text-pink-800">Ada pertanyaan atau ingin memesan secara langsung? Silakan hubungi kami melalui kontak berikut:</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="bg-pink-100 p-3 rounded-full mr-4 text-pink-600">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Alamat</h4>
+                                <p class="text-sm text-pink-700">Jl. Genteng Banyuwangi. Jawa Timur</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="bg-pink-100 p-3 rounded-full mr-4 text-pink-600">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Telepon</h4>
+                                <p class="text-sm text-pink-700">+62 858-1245-0439</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="bg-pink-100 p-3 rounded-full mr-4 text-pink-600">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Email</h4>
+                                <p class="text-sm text-pink-700">ellyzacantik@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold mb-4">Follow Kami</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 rounded-full bg-pink-100 hover:bg-pink-200 flex items-center justify-center text-pink-600 transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://api.whatsapp.com/send?phone=6285812450439&text=Halo%20Admin%20Saya%20Mau%20Order" class="w-10 h-10 rounded-full bg-pink-100 hover:bg-pink-200 flex items-center justify-center text-pink-600 transition">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <form class="bg-white p-6 rounded-xl shadow-md">
+                        <div class="mb-4">
+                            <label class="block text-pink-700 font-medium mb-2">Nama Lengkap</label>
+                            <input type="text" class="w-full px-4 py-2 border border-pink-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-pink-700 font-medium mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-2 border border-pink-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-pink-700 font-medium mb-2">Pesan</label>
+                            <textarea rows="4" class="w-full px-4 py-2 border border-pink-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full py-3 bg-pink-600 hover:bg-pink-700 text-white rounded-lg font-medium transition">
+                            Kirim Pesan
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="bg-pink-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-pink-700 flex items-center justify-center text-white">
+                            <i class="fas fa-banana text-xl"></i>
+                        </div>
+                        <h1 class="text-xl font-bold">Pisang Coklat Ellyza</h1>
+                    </div>
+                    <p class="text-sm text-pink-300">Lezatnya pisang coklat premium untuk setiap momen spesial Anda.</p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="font-bold mb-4">Produk</h4>
+                        <ul class="space-y-2 text-sm text-pink-300">
+                            <li><a href="#" class="hover:text-white transition">Original</a></li>
+                            <li><a href="#" class="hover:text-white transition">Keju</a></li>
+                            <li><a href="#" class="hover:text-white transition">Matcha</a></li>
+                            <li><a href="#" class="hover:text-white transition">Varian Lain</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold mb-4">Perusahaan</h4>
+                        <ul class="space-y-2 text-sm text-pink-300">
+                            <li><a href="#" class="hover:text-white transition">Tentang Kami</a></li>
+                            <li><a href="#" class="hover:text-white transition">Blog</a></li>
+                            <li><a href="#" class="hover:text-white transition">Karir</a></li>
+                            <li><a href="#" class="hover:text-white transition">Kebijakan Privasi</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold mb-4">Bantuan</h4>
+                        <ul class="space-y-2 text-sm text-pink-300">
+                            <li><a href="#" class="hover:text-white transition">FAQ</a></li>
+                            <li><a href="#" class="hover:text-white transition">Pengiriman</a></li>
+                            <li><a href="#" class="hover:text-white transition">Pembayaran</a></li>
+                            <li><a href="#" class="hover:text-white transition">Kontak</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-pink-800 mt-8 pt-8 text-center text-sm text-pink-400">
+                <p>© 2023 Pisang Coklat Ellyza. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <div class="fixed bottom-8 right-8 z-50">
+        <a href="https://api.whatsapp.com/send?phone=6285812450439&text=Halo%20Admin%20Saya%20Mau%20Order" class="w-16 h-16 rounded-full bg-green-500 hover:bg-green-600 flex items-center justify-center text-white text-2xl shadow-xl transition-all transform hover:scale-110 heartbeat">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+    
+    <script>
+        document.querySelector('.md\\:hidden').addEventListener('click', function() {
+            alert('Menu mobile akan ditampilkan di sini pada implementasi nyata');
+        });
+        
+        document.querySelectorAll('button:has(.fa-plus)').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const productName = this.closest('.product-card').querySelector('h3').textContent;
+                alert(`Produk ${productName} telah ditambahkan ke keranjang!`);
+            });
+        });
+    </script>
+</body>
+</html>
